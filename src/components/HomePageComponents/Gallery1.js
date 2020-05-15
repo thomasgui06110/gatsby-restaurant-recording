@@ -4,14 +4,14 @@ import { styles, Section } from "../../utils";
 import styled from "styled-components";
 import Img from "gatsby-image";
 
-const SINGLE_IMAGES = graphql`
+const GET_IMAGES = graphql`
   {
     getImages: allFile(filter: { relativeDirectory: { eq: "homeGallery" } }) {
       edges {
         node {
           childImageSharp {
             fluid(maxWidth: 500) {
-              src
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -23,7 +23,7 @@ const SINGLE_IMAGES = graphql`
 export default function Gallery() {
   return (
     <StaticQuery
-      query={SINGLE_IMAGES}
+      query={GET_IMAGES}
       render={(data) => {
         const images = data.getImages.edges;
 
