@@ -15,7 +15,7 @@ const PRODUCTS = graphql`
           price
           ingredients
           img {
-            fixed(width: 150) {
+            fixed(width: 150, height: 150) {
               ...GatsbyContentfulFixed_tracedSVG
             }
           }
