@@ -1,12 +1,19 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import styled from "styled-components";
+import { HomeHeader, Banner, BannerButton } from "../utils";
+import img from "../images/bcg/homeBcg.jpeg";
+import QuickInfo from "../components/HomePageComponents/QuickInfo";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h3>Hello from Gatsby</h3>
+    <HomeHeader img={img}>
+      <Banner title="eatery" subtitle="55 main street - Santa Monica, CA">
+        <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
+      </Banner>
+    </HomeHeader>
+    <QuickInfo />
   </Layout>
 );
 
