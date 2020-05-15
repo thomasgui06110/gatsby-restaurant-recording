@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "./Product";
 import { StaticQuery, graphql } from "gatsby";
-import { Link } from "gatsby";
 import { Section } from "../../utils";
 import Title from "../../utils/Title";
 import styled from "styled-components";
@@ -50,6 +49,7 @@ const ProductList = styled.div`
   display: grid;
   grid-template-columns: 100%;
   grid-row-gap: 3rem;
+
   @media (min-width: 576px) {
     grid-template-columns: 95%;
   }
