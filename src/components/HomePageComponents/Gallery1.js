@@ -11,7 +11,7 @@ const SINGLE_IMAGES = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              src
             }
           }
         }
